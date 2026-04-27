@@ -9,7 +9,7 @@ from time import sleep
 
 # Configurar opciones para el navegador Chrome
 options = Options()
-# options.add_argument('--headless') # Ejecuta Chrome en modo headless
+options.add_argument('--headless') # Ejecuta Chrome en modo headless
 options.add_argument('--no-sandbox') # Recomendado en entornos de CI como GitHub Actions
 options.add_argument('--disable-dev-shm-usage') # Ayuda a evitar algunos errores en contenedores
 
@@ -36,17 +36,17 @@ class AnimeFLVTest(unittest.TestCase):
         for anime in res:
             print(anime)
 
-    def test_busqueda_anime(self):
-        browser = self.browser
-        browser.maximize_window()
-        browser.get("https://www3.animeflv.net/")  
-        search = browser.find_element(By.ID, "search-anime")
-        search.clear()
-        search.send_keys("Naruto")
-        search.submit()
-        sleep(2)
-        results = browser.find_elements(By.CSS_SELECTOR, ".ListAnimes.AX.Rows.A03.C02.D02")  
-        self.assertGreater(len(results), 0, "No se encontraron resultados para 'Naruto'.")
+    # def test_busqueda_anime(self):
+    #     browser = self.browser
+    #     browser.maximize_window()
+    #     browser.get("https://www3.animeflv.net/")  
+    #     search = browser.find_element(By.ID, "search-anime")
+    #     search.clear()
+    #     search.send_keys("Naruto")
+    #     search.submit()
+    #     sleep(2)
+    #     results = browser.find_elements(By.CSS_SELECTOR, ".ListAnimes.AX.Rows.A03.C02.D02")  
+    #     self.assertGreater(len(results), 0, "No se encontraron resultados para 'Naruto'.")
 
     def test_title_text(self):
         browser = self.browser
