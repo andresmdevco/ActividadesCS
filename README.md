@@ -1,9 +1,9 @@
 # 🧪 Automatización y Pruebas en Python
 
-> Proyecto académico de pruebas y automatización en Python. Este repositorio contiene actividades prácticas relacionadas con:
-> - Pruebas unitarias en Python.
-> - Automatización web con Selenium.
-> - Ejecución de pruebas en integración continua con GitHub Actions y Jenkins.
+Proyecto académico de pruebas y automatización en Python. Este repositorio contiene actividades prácticas relacionadas con:
+- Pruebas unitarias en Python.
+- Automatización web con Selenium.
+- Ejecución de pruebas en integración continua con GitHub Actions y Jenkins.
 
 ---
 
