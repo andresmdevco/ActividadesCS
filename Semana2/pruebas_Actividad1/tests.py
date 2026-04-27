@@ -9,7 +9,7 @@ from time import sleep
 
 # Configurar opciones para el navegador Chrome
 options = Options()
-options.add_argument('--headless') # Ejecuta Chrome en modo headless
+# options.add_argument('--headless') # Ejecuta Chrome en modo headless
 options.add_argument('--no-sandbox') # Recomendado en entornos de CI como GitHub Actions
 options.add_argument('--disable-dev-shm-usage') # Ayuda a evitar algunos errores en contenedores
 
